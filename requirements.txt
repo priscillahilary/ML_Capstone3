@@ -1,0 +1,15 @@
+category-encoders==2.6.3
+dice-ml==0.11
+imbalanced-learn==0.12.2
+lightgbm==4.3.0
+matplotlib==3.8.4
+matplotlib-inline==0.1.7
+missingno==0.5.2
+numpy==1.23.5
+pandas==1.5.3
+pickleshare==0.7.5
+pipreqs==0.5.0
+pycaret==3.0.4
+python-dateutil==2.9.0.post0
+scipy==1.10.1
+seaborn==0.13.2
