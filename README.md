@@ -2,24 +2,69 @@
 
 ## Introduction
 
-Even though Supermarket can choose to remain a physical store or enter the ever-growing world of e-commerce, Supermarket remains popular in terms of retail sales, especially shopping for groceries and household necessities. Understanding client behavior is essential in the retail market so that organizations can adjust their marketing offers and campaigns accordingly. As a first step, the Supermarket asked the Data Analyst team to conduct analysis on customer data owned by the Supermarket.
+In recent years, the E-commerce company has experienced good customer growth, but recent data shows an increase in the number of customers who Churn from the E-Commerce website.
 
-The data provided is a Dataset of Customers who have subscribed to the Supermarket in the period 2012 to 2014. The data set consists of customer data points, each of which represents a unique consumer interaction with the supermarket. This includes a variety of characteristics, such as demographic information, shopping patterns, response to marketing campaigns, and so on.
-
-The data set, containing more than 2,000 items, provides a very useful source of information for analyzing customer relationship dynamics in the supermarket context.
+To retain profitability growth, the company can employ two strategies:
+ 1. Retain existing customers
+ 2. Acquire new customers
+In research findings that customer acquisition costs are five times higher than customer retention costs.
 
 ## Problem Statements
 
-By analyzing customer behavior over the last two years in Supermarket, `Market Strategy` will be formulated to help Supermarket businesses adapt their products based on target customers from various types of customers. The core objective of this project is to drive the formulation of market strategies by analyzing `Customer Shopping Behavior` and to improve the effectiveness of campaigns. Additionally, the company seeks to understand customer segmentation and identify potential areas for growth and development. This information will play an important role in designing more strategic and effective campaigns in the future.
+One of the challenges faced by e-commerce businesses is to retain customers and ensure they continue making transactions.
 
-    Key Question:
-    1. What insights can we gain into customers purchasing behavior based on their demographic information?
-    2. What potential areas can be developed or improved for future campaigns and sales?
-    3. How does the Supermarket perform in building its marketing strategy?
+## Goals
 
-## Stakeholder
+In many business scenarios, retaining customers or detecting customers who are likely to switch to competitors can be more important than attracting new customers. In this case, focusing on recall can help identify customers who might leave our platform or service, allowing for more proactive measures to retain them.
 
-Store Manager and Marketing Teams of Supermarket
+## Analytic Approach
+
+Here are the steps of the analysis which will undertake:
+
+Step-1: Conduct Exploratory Data Analysis (EDA).
+Step-2: Build a classification model based on behavioral analysis.
+Step-3: Identify the factors that contribute to the likelihood of customers Churning.
+Step-4: Develop a simulated scheme/strategy.
+
+The analysis results can be accessed by stakeholders through a dedicated platform (Web/Mobile) whenever they need to perform retention activities. 
+
+## Metric Evaluation
+
+Target:
+
+0: customer does not churn
+
+1: customer churns
+
+Confusion Matrix Terms:
+
+TP (True Positive): customer actually churns and is predicted to churn<br>
+TN (True Negative): customer actually does not churn and is predicted not to churn<br>
+FN (False Negative): customer actually churns and is predicted not to churn<br>
+FP (False Positive): customer actually does not churn and is predicted to churn<br>
+
+Cost of FN (False Negative):
+
+Disadvantages:
+
+* Loss of a customer (churn) costing $100 per customer<br>
+* Cost of customer acquisition to replace the churned customer at $500 per customer<br>
+
+Cost of FP (False Positive):
+
+Advantages:
+
+* As a result of mistakenly treating a customer who does not actually churn but is predicted to churn, the e-commerce platform's reputation may improve (non-churning customers will think the platform is generous in giving out promotions for free)
+
+Disadvantages:
+
+* Miss-targeted treatment for customers who do not churn (but are predicted to churn)
+* Waste of customer retention costs, time, and resources
+
+Based on these consequences, what I aim to do is create a model that can optimize the customer retention costs for the company without any customers churning from the e-commerce website. Therefore, I decide to emphasize False Negatives, but also not forget about False Positives, with a greater focus on recall. Hence, the focus metric we use is the F2-Score.
+
+**Reference**:
+- https://www.paddle.com/resources/customer-acquisition-vs-retention
 
 ## Contents of Project Analysis
 
@@ -36,28 +81,22 @@ Store Manager and Marketing Teams of Supermarket
 6. RECOMMENDATIONS
     - Recommendations for the Stakeholder/User to make a better marketing strategy. 
 
-## Instalations
-
-The following link to get Dashboard Tableau:
-
-https://public.tableau.com/views/SupermarketCustomersAnalysis_17139488290570/Performance?:language=en-GB&:sid=&:display_count=n&:origin=viz_share_link
-
-  
 ## Project Organization
-    ├── README.md                                           <-- The top-level README for developers using this project
-    ├── data                                   
-    │   ├── Supermarket Customers Data Dictionary.pdf       <-- Metadata (information about the data)
-    │   ├── Supermarket Customers.csv                       <-- Dataset
-    │   ├── data_RFM.csv                                    <-- Data about RFM Analysis for Tableau Dashboard
-    │   └── data_cleaned.csv                                <-- Clean data for Tableau Dashboard
-    ├── docs                                                <-- Contains documentations
-    ├── header.png                                          <-- Header for README 
-    ├── requirements.txt                                    <-- The requirements file for reproducing the analysis 
-    │                                                           environment, e.g. 
-    │                                                           Generated with pip freeze > requirements.txt
-    └── src                                                 <-- Source code for use in this project
-        └── SupermarketAnalysis_capstone2.ipynb             <-- Data analysis in Jupiter Notebook file
+    .
+    ├── README.md
+    ├── data
+    │   ├── E-commerce Customer Churn.docx
+    │   ├── data_ecommerce_customer_churn.csv
+    │   ├── data_seen.csv
+    │   ├── data_unseen.csv
+    │   └── saved_nb_model.pkl
+    ├── docs
+    ├── header.png
+    ├── logs.log
+    ├── requirements.txt
+    └── src
+        └── E-commerce_churn.ipynb
 
 ## Contribute
 
-If you'd like to contribute to Supermarket_Customer_Analysis, check out https://github.com/priscillahilary/Supermarket_Analysis_Capstone2.git, or feel free to contact me.
+If you'd like to contribute to Supermarket_Customer_Analysis, check out https://github.com/priscillahilary/ML_Capstone3.git, or feel free to contact me.
