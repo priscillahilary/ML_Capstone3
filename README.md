@@ -66,20 +66,6 @@ Based on these consequences, what I aim to do is create a model that can optimiz
 **Reference**:
 - https://www.paddle.com/resources/customer-acquisition-vs-retention
 
-## Contents of Project Analysis
-
-1. DATA UNDERSTANDING
-    - Understanding the Dataset.
-2. DATA PREPARATION
-    - Prepare the Dataset for the Analysis.
-3. DATA CLEANING
-    - Cleaning the Dataset and ready to Analysis.
-4. DATA ANALYSIS
-    - Analysis the dateset problems with stories and visualization also presenting the insight for the Stakeholder to make a business decisions.
-5. CONCLUSIONS
-    - The conclusion from the data analysis.
-6. RECOMMENDATIONS
-    - Recommendations for the Stakeholder/User to make a better marketing strategy. 
 
 ## Project Organization
     .
